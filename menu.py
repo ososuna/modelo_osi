@@ -28,5 +28,3 @@ def menu():
       print('\n¡Hasta pronto!\n')
       sys.exit()
 
-menu()
-  

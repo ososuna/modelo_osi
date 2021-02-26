@@ -1,4 +1,5 @@
 import bin
+import hex
 import random_ip as ip
 import print_dict as dic
 import charge
@@ -97,9 +98,12 @@ class Tcp:
   def aplicacion(self):
     if(self.dir == 'desc'):
       time.sleep(1.5)
+      print(f'{self.cadena}\n')
+      time.sleep(1.5)
       print('\tCapa de Aplicación')
       print('Contiene todos los protocolos de alto nivel.')
-      self.arr_aplicacion = [self.cadena, 'HTTP']
+      cadena_hex = hex.string_to_hex(self.cadena)
+      self.arr_aplicacion = [cadena_hex, 'HTTP']
       self.dic['Aplicación'] = self.arr_aplicacion 
       dic.print_dict(self.dic, 'Aplicación')
       print()
